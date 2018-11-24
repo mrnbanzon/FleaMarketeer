@@ -1,0 +1,35 @@
+{
+  "name": "fleamarketeer",
+  "version": "1.0.0",
+  "description": "For the local yard sale / flea market to keep track of inventory and sales.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrnbanzon/FleaMarketeer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrnbanzon/FleaMarketeer/issues"
+  },
+  "homepage": "https://github.com/mrnbanzon/FleaMarketeer#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "nodemon": "^1.18.6",
+    "webpack": "^4.26.0",
+    "webpack-cli": "^3.1.2"
+  }
+}
