@@ -4,6 +4,7 @@
   "description": "For the local yard sale / flea market to keep track of inventory and sales.",
   "main": "index.js",
   "scripts": {
+    "watch": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
