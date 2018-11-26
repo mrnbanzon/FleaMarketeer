@@ -1,6 +1,8 @@
 const express = require('express');
 const { resolve } = require('path');
 
+const db = require('../database/index.js');
+
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
