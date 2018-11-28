@@ -4,12 +4,13 @@
   "description": "For the local yard sale / flea market to keep track of inventory and sales.",
   "private": true,
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "server": "nodemon ./server/index.js",
     "dev": "npm run watch & nodemon ./server/index.js",
-    "start": "npm run build && node ./server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./server/index.js",
+    "heroku-postbuild": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
