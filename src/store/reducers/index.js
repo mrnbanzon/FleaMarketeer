@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { createStore } from 'redux';
 
 const reducer = (state = {}, action) => {
   switch (action.type) {
@@ -7,4 +8,6 @@ const reducer = (state = {}, action) => {
   }
 };
 
-export default reducer;
+const store = createStore(reducer);
+
+export default store;

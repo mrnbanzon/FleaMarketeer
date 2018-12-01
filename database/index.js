@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
-const db = new Sequelize('fleamarket', 'root', '', {
+const db = new Sequelize('fleamarket', '', '', {
   host: 'localhost',
-  dialect: 'mysql',
+  dialect: 'postgres',
   operatorsAliases: false
 });
 
