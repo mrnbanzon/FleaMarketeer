@@ -1,0 +1,160 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fafafa;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: 'Sriracha';
+}
+
+a {
+  font-family: 'Sriracha';
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: #2ecc71;
+}
+
+header > h1 {
+  margin: auto 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px 0 12px 5px;
+  text-align: left;
+}
+
+th {
+  font-family: 'Sriracha';
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: whitesmoke;
+}
+
+.primary-content {
+  width: 70%;
+  overflow: auto;
+  color: #627c85;
+}
+
+.primary-content > div {
+  margin: 0 20px 10px 20px;
+  padding: 0 10px 10px 10px;
+  border-radius: 6px;
+  border: solid whitesmoke 1px;
+  background-color: white;
+}
+
+.secondary-content {
+  width: 30%;
+  overflow: auto;
+  padding: 10px;
+  color: white;
+  background-color: #0a2e36;
+}
+
+.secondary-content a {
+  color: inherit;
+  background-color: #0a2e36;
+}
+
+.secondary-content a:hover {
+  color: #2ecc71;
+}
+
+.summary__details {
+  margin: 0 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5em 1em;
+}
+
+.summary__details > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inventory {
+  height: 70%;
+  overflow: auto;
+}
+
+.inventory__details {
+  margin: 0 25px;
+}
+
+.nav-anchor-container {
+  text-align: center;
+  padding: 10px;
+}
+
+.logout {
+  text-align: right;
+}
+
+.logout a {
+  padding: 2px 10px;
+  border: solid white 2px;
+}
+
+.logout a:hover {
+  border-color: #2ecc71;
+}
+
+a.start-transaction {
+  padding: 2px 10px;
+  font-size: 1.75em;
+  color: white;
+  background-color: #2ecc71;
+}
+
+a.start-transaction:hover {
+  color: #2ecc71;
+  background-color: white;
+}
+
+.profile__img {
+  text-align: center;
+}
+.profile__img img {
+  max-height: 200px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.credit-to-icon-creator {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+#app {
+  height: 100%;
+}
+
+#main-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}

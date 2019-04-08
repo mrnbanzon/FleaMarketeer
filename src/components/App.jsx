@@ -1,5 +1,6 @@
 import React from 'react';
+import FleaMarketeer from './FleaMarketeer';
 
-const App = () => <h1>FleaMarketeer!</h1>;
+const App = () => <FleaMarketeer />;
 
 export default App;
