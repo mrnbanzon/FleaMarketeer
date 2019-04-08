@@ -1,4 +1,5 @@
 import React from 'react';
+import AddItem from '../shared/AddItem';
 
 // test data -- remove later
 const data = [
@@ -44,8 +45,9 @@ const Inventory = props => {
     <div className="inventory">
       <h3>Inventory</h3>
       <div className="inventory__details">
+        <AddItem />
         <table>
-          <tbody>
+          <thead>
             <tr>
               <th>item</th>
               <th>val</th>
@@ -53,6 +55,8 @@ const Inventory = props => {
               <th>+/-</th>
               <th />
             </tr>
+          </thead>
+          <tbody>
             {data.map(prod => {
               return (
                 <tr key={prod.id}>

@@ -5,7 +5,6 @@ const { resolve } = require('path');
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-// compress responses (will use eventually)
 app.use(compression());
 
 // express built-in body parser
