@@ -25,8 +25,15 @@ class SecondaryContent extends React.Component {
           <a href="#">Logout</a>
         </div>
         {this.state.isTransaction ?
-          <Transaction onBackClick={this.toggleTransaction} /> :
-          <Profile onTransaction={this.toggleTransaction} />
+          <Transaction
+            onBackClick={this.toggleTransaction}
+            handleTransaction={this.props.handleTransaction}
+          /> :
+          <Profile
+            onTransaction={this.toggleTransaction}
+            marketName={this.props.marketName}
+            marketDesc={this.props.marketDesc}
+          />
         }
       </div>
     );

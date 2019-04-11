@@ -151,7 +151,7 @@ tr:nth-child(even) {
   overflow: auto;
 }
 
-.inventory__details {
+.inventory__table {
   margin: 0 25px;
 }
 
@@ -172,12 +172,12 @@ tr:nth-child(even) {
   border-color: #2ecc71;
 }
 
-a.transaction {
+a.transaction-button {
   font-size: 1.75em;
   background-color: #2ecc71;
 }
 
-a.transaction:hover {
+a.transaction-button:hover {
   color: #2ecc71;
   background-color: white;
 }
@@ -207,7 +207,7 @@ a.transaction:hover {
   justify-content: space-between;
 }
 
-.transaction__details {
+.transaction__table {
   height: 60vh;
   overflow: auto;
   color: #627c85;
@@ -215,17 +215,17 @@ a.transaction:hover {
   border-radius: 6px;
 }
 
-.transaction__details form {
+.transaction__table form {
   flex-direction: column;
   border: none;
 }
 
-.transaction__details form > button {
+.transaction__table form > button {
   margin: 1em auto;
   width: 80%;
 }
 
-.transaction__details form > div {
+.transaction__table form > div {
   width: 90%;
   margin: 0.25em auto;
   display: flex;
@@ -233,7 +233,7 @@ a.transaction:hover {
   justify-content: space-between;
 }
 
-.transaction__details table {
+.transaction__table table {
   width: 95%;
   margin: 0 auto;
 }

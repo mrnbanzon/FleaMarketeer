@@ -6,8 +6,16 @@ import Inventory from './Inventory';
 const PrimaryContent = props => (
   <div className="primary-content">
     <Header />
-    <Summary />
-    <Inventory />
+    <Summary
+      inventoryCount={props.inventoryCount}
+      totalSales={props.totalSales}
+      avgDiff={props.avgDiff}
+      hotItem={props.hotItem}
+    />
+    <Inventory
+      items={props.inventory}
+      addItem={props.inventoryAddItem}
+    />
   </div>
 );
 

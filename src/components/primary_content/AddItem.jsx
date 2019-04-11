@@ -22,6 +22,8 @@ class AddItem extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let { item, value, amount } = this.state;
+    value = parseFloat(value);
+    amount = parseInt(amount);
     this.props.add({ item, value, amount });
   }
 

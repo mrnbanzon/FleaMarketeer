@@ -10,6 +10,7 @@ class Transaction extends React.Component {
     };
 
     this.add = this.add.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   add(item) {
@@ -22,7 +23,9 @@ class Transaction extends React.Component {
     });
   }
 
-  handleSubmit() { }
+  handleSubmit() {
+    this.props.handleTransaction(this.state.items, this.state.total);
+  }
 
   render() {
     return (
@@ -33,7 +36,7 @@ class Transaction extends React.Component {
           </a>
           <h4>Transaction</h4>
         </div>
-        <div className="transaction__details">
+        <div className="transaction__table">
           <AddItem add={this.add} />
           <table>
             <thead>
@@ -47,7 +50,7 @@ class Transaction extends React.Component {
               {this.state.items.map(prod => (
                 <tr key={prod.id}>
                   <td>{prod.item}</td>
-                  <td>{prod.value}</td>
+                  <td>{prod.value.toFixed(2)}</td>
                   <td>{prod.amount}</td>
                 </tr>
               ))}
@@ -60,7 +63,10 @@ class Transaction extends React.Component {
           <h3>{this.state.total.toFixed(2)}</h3>
         </div>
         <div className="nav-anchor-container">
-          <a href="#" className="transaction">
+          <a href="#"
+            className="transaction-button"
+            onClick={this.handleSubmit}
+          >
             Submit
           </a>
         </div>

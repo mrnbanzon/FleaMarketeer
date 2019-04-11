@@ -1,33 +1,25 @@
 import React from 'react';
 
-// test data
-const data = {
-  total: '105.90',
-  count: '210',
-  diff: '+3.50',
-  hotItem: 'Teddy Bear'
-};
-
-const Summary = props => {
+const Summary = ({ inventoryCount, totalSales, avgDiff, hotItem }) => {
   return (
     <div className="summary">
       <h3>Summary</h3>
       <div className="summary__details">
         <div>
           <span>total sales: </span>
-          <span>{'$' + data.total}</span>
+          <span>{'$' + totalSales}</span>
         </div>
         <div>
           <span>inventory count: </span>
-          <span>{data.count}</span>
+          <span>{inventoryCount}</span>
         </div>
         <div>
           <span>estimate v. actual: +/- </span>
-          <span>{'(' + data.diff + ')'}</span>
+          <span>{'(' + avgDiff + ')'}</span>
         </div>
         <div>
           <span>hot item: </span>
-          <span>{data.hotItem}</span>
+          <span>{hotItem}</span>
         </div>
       </div>
     </div>
