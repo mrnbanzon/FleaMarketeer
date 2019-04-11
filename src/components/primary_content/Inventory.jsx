@@ -1,42 +1,42 @@
 import React from 'react';
-import AddItem from '../shared/AddItem';
+import AddItem from './AddItem';
 
 // test data -- remove later
 const data = [
   {
     id: 0,
     item: 'Pooh Bear Plush Toy',
-    val: '5.50',
-    cnt: '49',
-    diff: '2.20'
+    value: 5.5,
+    amount: '49',
+    diff: 2.2
   },
   {
     id: 1,
     item: 'Red Balloon',
-    val: '2.00',
-    cnt: '120',
-    diff: '0.0'
+    value: 2,
+    amount: '120',
+    diff: 0
   },
   {
     id: 2,
     item: 'Piglet Plush Toy',
-    val: '4.50',
-    cnt: '62',
-    diff: '1.70'
+    value: 4.5,
+    amount: '62',
+    diff: 1.7
   },
   {
     id: 3,
     item: 'Tigger Plush Toy',
-    val: '6.00',
-    cnt: '54',
-    diff: '-0.50'
+    value: 6.0,
+    amount: '54',
+    diff: -0.5
   },
   {
     id: 4,
     item: 'Eyeore Plush Toy',
-    val: '4.00',
-    cnt: '83',
-    diff: '-0.25'
+    value: 4.0,
+    amount: '83',
+    diff: -0.25
   }
 ];
 
@@ -45,15 +45,14 @@ const Inventory = props => {
     <div className="inventory">
       <h3>Inventory</h3>
       <div className="inventory__details">
-        <AddItem />
+        <AddItem add={state => console.log(state)} />
         <table>
           <thead>
             <tr>
               <th>item</th>
-              <th>val</th>
-              <th>cnt</th>
+              <th>val.</th>
+              <th>amnt.</th>
               <th>+/-</th>
-              <th />
             </tr>
           </thead>
           <tbody>
@@ -61,9 +60,9 @@ const Inventory = props => {
               return (
                 <tr key={prod.id}>
                   <td>{prod.item}</td>
-                  <td>{prod.val}</td>
-                  <td>{prod.cnt}</td>
-                  <td>{prod.diff}</td>
+                  <td>{prod.value.toFixed(2)}</td>
+                  <td>{prod.amount}</td>
+                  <td>{prod.diff.toFixed(2)}</td>
                 </tr>
               );
             })}
