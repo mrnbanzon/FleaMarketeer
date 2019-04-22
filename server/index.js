@@ -2,6 +2,10 @@ const express = require('express');
 const compression = require('compression');
 const { resolve } = require('path');
 
+
+// temp data storage
+const { data } = require('../database/data.js');
+
 const app = express();
 const PORT = process.env.PORT || 4000;
 
@@ -13,6 +17,11 @@ app.use(express.urlencoded({ extended: false }));
 
 // serve static files
 app.use('/', express.static(resolve(__dirname, '../dist')));
+
+// obtain necessary data upon login
+app.get('/loginData', (req, res) => {
+  res.send(data);
+});
 
 app.listen(PORT, () => {
   console.log(`FleaMarketeer listening on port ${PORT}`);

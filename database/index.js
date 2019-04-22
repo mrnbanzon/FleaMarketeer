@@ -5,7 +5,7 @@ const db = new Sequelize('fleamarket', '', '', {
   operatorsAliases: false
 });
 
-/* NOTE: create db 'fleamarket' in mysql prior to running */
+/* NOTE: create db 'fleamarket' in postgres prior to running */
 db.authenticate()
   .then(() => {
     console.log('Connected to fleamarketeer db.');
