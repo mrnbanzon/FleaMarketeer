@@ -1,5 +1,5 @@
 import React from 'react';
-import AddItem from '../primary_content/AddItem';
+import AddItem from '../shared/AddItem';
 
 class Transaction extends React.Component {
   constructor(props) {
@@ -13,13 +13,20 @@ class Transaction extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  add(item) {
+  add(product) {
+    if (product.item === '') return;
+    if (product.value === undefined || isNaN(product.value)) {
+      product.value = 0;
+    }
+    if (product.amount === undefined || isNaN(product.amount)) {
+      product.amount = 0;
+    }
     let { items } = this.state;
-    item.id = items.length;
-    items.push(item);
+    product.id = items.length;
+    items.push(product);
     this.setState({
       items,
-      total: this.state.total + item.value * item.amount
+      total: this.state.total + product.value * product.amount
     });
   }
 

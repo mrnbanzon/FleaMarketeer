@@ -23,32 +23,36 @@ class App extends React.Component {
     fetch('/loginData')
       .then((res) => res.json())
       .then((data) => {
-        this.setState({
-          inventory: data.inventory,
-          inventoryCount: data.inventoryCount,
-          totalSales: data.totalSales,
-          avgDiff: data.avgDiff,
-          hotItem: data.hotItem,
-          marketName: data.marketName,
-          marketDesc: data.marketDesc
-        });
+        this.setState({ ...data });
       });
   }
 
-  inventoryAddItem(item) {
-    let { inventory } = this.state;
-    item.id = inventory.length;
-    item.diff = 0;
-    inventory.push(item);
-    this.setState({
-      inventory,
-      inventoryCount: this.state.inventoryCount + item.amount
+  inventoryAddItem(product) {
+    if (product.item === '') return;
+    if (product.value === undefined || isNaN(product.value)) {
+      product.value = 0;
+    }
+    if (product.amount === undefined || isNaN(product.amount)) {
+      product.amount = 0;
+    }
+
+    let { inventory, inventoryCount } = this.state;
+    product.id = inventory.length;
+    product.diff = 0;
+    inventory.push(product);
+    inventoryCount += product.amount;
+    this.setState({ inventory, inventoryCount });
+
+    fetch('/addToInventory', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(product)
     });
   }
 
-  handleTransaction(items, total) {
+  handleTransaction(products, total) {
     // alter inventory, inventoryCount, totalSales
-    console.log(items);
+    console.log(products);
     console.log(total);
   }
 

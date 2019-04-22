@@ -23,6 +23,14 @@ app.get('/loginData', (req, res) => {
   res.send(data);
 });
 
+// add item to inventory
+app.post('/addToInventory', (req, res) => {
+  let product = req.body;
+  data.inventory.push(product);
+  data.inventoryCount += product.amount;
+  res.send();
+});
+
 app.listen(PORT, () => {
   console.log(`FleaMarketeer listening on port ${PORT}`);
 });

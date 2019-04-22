@@ -1,7 +1,7 @@
 import React from 'react';
-import AddItem from './AddItem';
+import AddItem from '../shared/AddItem';
 
-const Inventory = ({ items, addItem }) => {
+const Inventory = ({ inventory, addItem }) => {
   return (
     <div className="inventory">
       <h3>Inventory</h3>
@@ -17,7 +17,7 @@ const Inventory = ({ items, addItem }) => {
             </tr>
           </thead>
           <tbody>
-            {items.map(prod => {
+            {inventory.map(prod => {
               return (
                 <tr key={prod.id}>
                   <td>{prod.item}</td>

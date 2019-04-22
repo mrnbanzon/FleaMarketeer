@@ -13,7 +13,7 @@ const PrimaryContent = props => (
       hotItem={props.hotItem}
     />
     <Inventory
-      items={props.inventory}
+      inventory={props.inventory}
       addItem={props.inventoryAddItem}
     />
   </div>
